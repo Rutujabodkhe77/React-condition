@@ -1,0 +1,21 @@
+.myButton
+{
+    color:white;
+    margin-left:200px;
+    border:2px solid purple;
+    margin-top:200px;
+    background-color:black;
+}
+.MyDiv
+{
+    width:400px;
+    height:400px;
+    background-color: violet;
+    margin:200px;
+    margin-top: 0px;
+}
+h1
+{
+    text-align: center;
+    color:purple; 
+}

@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState}from 'react'
+import './style.css';
 
 function App() {
+  const[my_condition,ChangeMyCondition] =useState(false)
+  let MyDiv='';
+  const showMyDiv =() =>
+  {
+    ChangeMyCondition(true);
+  }
+  const hideMyDiv =() =>
+  {
+    ChangeMyCondition(false);
+  }
+
+  if(my_condition)
+  {
+    MyDiv =(
+ <div className="MyDiv">
+        <h1> Current status:{my_condition}</h1>
+      </div>
+    );
+  }
+  else
+  {
+  
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button className="myButton"onClick={showMyDiv}> Click Here To Show </button>
+      <button className="myButton"onClick={hideMyDiv}> Click Here To Hide   </button>
+      {MyDiv}
     </div>
+  
   );
 }
 
